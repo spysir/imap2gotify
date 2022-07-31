@@ -18,7 +18,8 @@ folder = "INBOX"
 
 [rules]
  [rules.duty]
-   from = "aaa@bbb.ccc"
+   #from = "aaa@bbb.ccc"
+   from = ""
    subject = "CRITICAL"
    priority = 10
    [rules.duty.extras.'android::action'.onReceive]
