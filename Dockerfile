@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM python:3.11-alpine
 
 # This prevents Python from writing out pyc files
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -14,8 +14,7 @@ RUN apk update && apk add ca-certificates \
 # Run pip first for docker build caching
 COPY requirements.txt /app/requirements.txt
 WORKDIR /app
-RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Copy rest of the app
 COPY . /app
