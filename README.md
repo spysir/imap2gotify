@@ -24,7 +24,19 @@ or
 ```bash
 docker build -t cyrinux/imap2gotify .
 ```
-
+## docker-compose
+```
+version: "3.8"
+services:
+  imap2gotify:
+    image: cyrinux/imap2gotify:latest
+    container_name: imap2gotify
+    restart: always
+    volumes:
+      - ./config:/app/config
+    environment:
+      - TZ=Asia/Shanghai
+```
 ## Configuration
 
 - Check `settings.toml.example` example in `config` directory.
