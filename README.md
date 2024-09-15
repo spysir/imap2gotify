@@ -26,7 +26,6 @@ docker build -t cyrinux/imap2gotify .
 ```
 ## docker-compose
 ```
-version: "3.8"
 services:
   imap2gotify:
     image: cyrinux/imap2gotify:latest
